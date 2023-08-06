@@ -57,5 +57,6 @@ namespace WebForm.Pages
             id= selectedrow.Cells[1].Text;
             Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=D");
         }
+    
     }
 }
