@@ -74,7 +74,7 @@ namespace WebForm.Pages
             cmd.Parameters.Add("@Fecha", SqlDbType.VarChar).Value= tbdate.Text;
             cmd.ExecuteNonQuery();
             con.Close();
-            Response.Redirect("Index.aspx");
+            Response.Redirect("paginaprimera.aspx");
         }
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
@@ -98,11 +98,11 @@ namespace WebForm.Pages
             cmd.Parameters.Add("@Id", SqlDbType.Int).Value= sID;
             cmd.ExecuteNonQuery();
             con.Close();
-            Response.Redirect("Index.aspx");
+            Response.Redirect("paginaprimera.aspx");
         }
         protected void BtnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Index.aspx");
+            Response.Redirect("paginaprimera.aspx");
         }
     }
 }

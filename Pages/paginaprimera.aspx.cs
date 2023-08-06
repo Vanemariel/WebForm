@@ -47,7 +47,7 @@ namespace WebForm.Pages
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
             id= selectedrow.Cells[1].Text;
-            Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=U");
+            Response.Redirect("CRUD.aspx?id=" + id + "&op=U");
         }
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
@@ -55,8 +55,12 @@ namespace WebForm.Pages
             Button BtnConsultar = (Button)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
             id= selectedrow.Cells[1].Text;
-            Response.Redirect("~/Pages/CRUD.aspx?id=" + id + "&op=D");
+            Response.Redirect("CRUD.aspx?id=" + id + "&op=D");
         }
-    
+        protected void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            Session.Remove("usuariologueado");
+            Response.Redirect("Login.aspx");
+        }
     }
 }

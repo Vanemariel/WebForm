@@ -41,5 +41,8 @@
                 </asp:GridView>
             </div>
         </div>
+                <div>
+            <asp:Button ID="BtnCerrar" runat="server" Text="Cerrar Sesion" CssClass="btn btn-dark" OnClick="BtnCerrar_Click"/>
+        </div>
     </form>
 </asp:Content>
